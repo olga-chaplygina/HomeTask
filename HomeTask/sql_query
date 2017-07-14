@@ -1,0 +1,17 @@
+Есть таблица sales со следующими полями
+- id (INT, primary key, auto increment )
+- date (DATETIME)
+- amount (double)
+- comment (varchar(255))
+-
+- составить запрос для получения всех продаж, где сумма сделки (amount) выше 500
+SELECT amount FROM sales WHERE amount>500;
+- составить запрос, который удаляет из таблицы все записи, где сумма сделки 0
+DELETE * FROM sales WHERE amount=0;
+- составить запрос, добавляющий в таблицу запись с текущим значением времени, суммой сделки 10 и пустым комментарием.
+INSERT INTO sales (date, amount, comment) VALUES (now(), 500, 'продажа вентиляторов');
+- составить запрос, отображающий все уникальные цены, без повторений.
+SELECT DISTINCT amount FROM sales;
+
+
+
